@@ -20,12 +20,12 @@ class OperationsController {
         case 'multiply':
           result = operands.reduce((a, b) => a * b, 1)
           break
-        case 'divide':
-          if (operands.includes(0)) {
-            return res.status(400).json({ error: 'Division by zero' })
-          }
-          result = operands.reduce((a, b) => a / b)
-          break
+        // case 'divide':
+        //   if (operands.includes(0)) {
+        //     return res.status(400).json({ error: 'Division by zero' })
+        //   }
+        //   result = operands.reduce((a, b) => a / b)
+        //   break
         default:
           return res.status(400).json({ error: 'Invalid operation' })
       }
